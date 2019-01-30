@@ -1,9 +1,10 @@
 /**
- * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
-// https://ckeditor5.github.io/docs/nightly/ckeditor5/latest/builds/guides/integration/advanced-setup.html#scenario-3-using-two-different-editors
+// https://ckeditor5.github.io/docs/nightly/ckeditor5/latest/builds/guides/integration/
+// advanced-setup.html#scenario-3-using-two-different-editors
 
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
@@ -15,6 +16,7 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
@@ -29,8 +31,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment'
-import Font from '@ckeditor/ckeditor5-font/src/font'
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 class ClassicEditor extends ClassicEditorBase {}
 class InlineEditor extends InlineEditorBase {}
@@ -43,6 +45,7 @@ const plugins = [
 	Bold,
 	Italic,
 	BlockQuote,
+	CKFinder,
 	EasyImage,
 	Heading,
 	Image,
@@ -109,5 +112,5 @@ ClassicEditor.defaultConfig = config;
 InlineEditor.defaultConfig = config;
 
 export default {
-    ClassicEditor, InlineEditor
+	ClassicEditor, InlineEditor
 };
