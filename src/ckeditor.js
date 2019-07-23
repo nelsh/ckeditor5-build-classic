@@ -33,6 +33,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 class ClassicEditor extends ClassicEditorBase {}
 class InlineEditor extends InlineEditorBase {}
@@ -62,7 +63,8 @@ const plugins = [
 	TableToolbar,
 
 	Alignment,
-	Font
+	Font,
+	RemoveFormat
 ];
 
 ClassicEditor.builtinPlugins = plugins;
@@ -72,6 +74,7 @@ InlineEditor.builtinPlugins = plugins;
 const config = {
 	toolbar: {
 		items: [
+			'removeFormat',
 			'heading',
 			'fontSize',
 			'|',
