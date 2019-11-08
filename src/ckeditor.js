@@ -29,6 +29,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
@@ -39,7 +40,6 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
@@ -66,6 +66,7 @@ const plugins = [
 	ImageToolbar,
 	ImageUpload,
 	ImageResize,
+	Indent,
 	Link,
 	List, TodoList,
 	MediaEmbed,
@@ -98,6 +99,10 @@ const config = {
 			'outdent', 'indent',
 			'bulletedList',
 			'numberedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
 			'imageUpload',
 			'blockQuote',
 			'insertTable',
